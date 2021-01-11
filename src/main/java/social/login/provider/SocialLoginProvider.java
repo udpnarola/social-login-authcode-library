@@ -1,8 +1,8 @@
 package social.login.provider;
 
-import social.login.dto.SocialLoginDetail;
 import lombok.Getter;
 import lombok.Setter;
+import social.login.dto.SocialLoginDetail;
 import social.login.user.SocialUser;
 
 @Getter

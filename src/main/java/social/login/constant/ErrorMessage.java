@@ -2,8 +2,10 @@ package social.login.constant;
 
 public class ErrorMessage {
 
+    public static final String ERR_EMPTY_OR_NULL_AUTH_CODE = "The auth code can not be empty or null";
+    public static final String ERR_GET_LINKEDIN_USER_DETAIL = "Unable to get Linkedin user details";
+    public static final String ERR_GET_LINKEDIN_USER_EMAIL = "Unable to get Linkedin user email";
+
     private ErrorMessage() {
     }
-
-    public static final String ERR_EMPTY_OR_NULL_AUTH_CODE = "The auth code can not be empty or null";
 }

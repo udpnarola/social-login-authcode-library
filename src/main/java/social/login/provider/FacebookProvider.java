@@ -10,7 +10,6 @@ import social.login.util.SocialProviderUtil;
 
 import java.util.Map;
 
-
 public class FacebookProvider extends SocialLoginProvider {
 
     private FacebookConnectionFactory connectionFactory;
