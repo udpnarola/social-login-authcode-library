@@ -10,4 +10,6 @@ import lombok.Setter;
 public class SocialLoginDetail {
 
     private String authCode;
+    private String oauthToken;
+    private String oauthVerifier;
 }
