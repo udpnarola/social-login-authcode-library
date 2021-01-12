@@ -20,7 +20,7 @@ public class SocialProviderUtil {
         return accessGrant.getAccessToken();
     }
 
-    private static void validateAuthCode(String authCode) {
+    public static void validateAuthCode(String authCode) {
         if (StringUtils.isBlank(authCode))
             throw new BadDataException(ERR_EMPTY_OR_NULL_AUTH_CODE);
     }
