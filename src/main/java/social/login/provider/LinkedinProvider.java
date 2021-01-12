@@ -37,6 +37,10 @@ public class LinkedinProvider extends SocialLoginProvider {
         ResponseEntity<JsonNode> linkedInProfileResponseEntity = restOperations.getForEntity(GET_USER_PROFILE_URL, JsonNode.class);
         ResponseEntity<JsonNode> emailResponseEntity = restOperations.getForEntity(GET_USER_EMAIL_URL, JsonNode.class);
 
+        return prepareUser(linkedInProfileResponseEntity, emailResponseEntity);
+    }
+
+    private SocialUser prepareUser(ResponseEntity<JsonNode> linkedInProfileResponseEntity, ResponseEntity<JsonNode> emailResponseEntity) {
         JsonNode linkedinProfile = linkedInProfileResponseEntity.getBody();
 
         SocialUser socialUser = new SocialUser();
