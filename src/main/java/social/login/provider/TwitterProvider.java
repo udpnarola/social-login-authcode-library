@@ -56,11 +56,11 @@ public class TwitterProvider extends SocialLoginProvider {
     }
 
     private SocialUser prepareUser(User twitterUser) {
-        SocialUser SocialUser = new SocialUser();
-        SocialUser.setFirstName(twitterUser.getName());
-        SocialUser.setEmail(twitterUser.getEmail());
-        SocialUser.setImageUrl(twitterUser.getOriginalProfileImageURL());
-        return SocialUser;
+        SocialUser socialUser = new SocialUser();
+        socialUser.setFirstName(twitterUser.getName());
+        socialUser.setEmail(twitterUser.getEmail());
+        socialUser.setImageUrl(twitterUser.getOriginalProfileImageURL());
+        return socialUser;
     }
 
     private Map<String, String> getAccessToken(SocialLoginDetail socialLoginDetail) {
