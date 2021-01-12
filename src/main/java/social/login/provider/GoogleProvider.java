@@ -48,7 +48,8 @@ public class GoogleProvider extends SocialLoginProvider {
         socialUser.setFirstName((String) payload.get("given_name"));
         socialUser.setLastName((String) payload.get("family_name"));
         socialUser.setEmail((String) payload.get("email"));
-        socialUser.setImageUrl((String) payload.get("picture"));
+        socialUser.setImageUrl(((String) payload.get("picture"))
+                .replaceFirst("(=).*$", "=s400-c"));
         return socialUser;
     }
 }
