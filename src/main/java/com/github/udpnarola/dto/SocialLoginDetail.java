@@ -1,4 +1,4 @@
-package social.login.dto;
+package com.github.udpnarola.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

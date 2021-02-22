@@ -1,12 +1,11 @@
-package social.login.util;
+package com.github.udpnarola.util;
 
+import com.github.udpnarola.constant.ErrorMessage;
+import com.github.udpnarola.exception.BadDataException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.social.connect.support.OAuth2ConnectionFactory;
 import org.springframework.social.oauth2.AccessGrant;
-import social.login.dto.SocialLoginDetail;
-import social.login.exception.BadDataException;
-
-import static social.login.constant.ErrorMessage.ERR_EMPTY_OR_NULL_AUTH_CODE;
+import com.github.udpnarola.dto.SocialLoginDetail;
 
 public class SocialProviderUtil {
 
@@ -22,6 +21,6 @@ public class SocialProviderUtil {
 
     public static void validateAuthCode(String authCode) {
         if (StringUtils.isBlank(authCode))
-            throw new BadDataException(ERR_EMPTY_OR_NULL_AUTH_CODE);
+            throw new BadDataException(ErrorMessage.ERR_EMPTY_OR_NULL_AUTH_CODE);
     }
 }

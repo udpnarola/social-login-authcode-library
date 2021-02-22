@@ -1,4 +1,4 @@
-package social.login.user;
+package com.github.udpnarola.user;
 
 import lombok.Getter;
 import lombok.Setter;

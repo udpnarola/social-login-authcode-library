@@ -1,5 +1,9 @@
-package social.login.provider;
+package com.github.udpnarola.provider;
 
+import com.github.udpnarola.constant.ErrorMessage;
+import com.github.udpnarola.exception.BadDataException;
+import com.github.udpnarola.exception.UserDetailException;
+import com.github.udpnarola.user.SocialUser;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -8,10 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
-import social.login.dto.SocialLoginDetail;
-import social.login.exception.BadDataException;
-import social.login.exception.UserDetailException;
-import social.login.user.SocialUser;
+import com.github.udpnarola.dto.SocialLoginDetail;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
@@ -20,8 +21,6 @@ import twitter4j.conf.ConfigurationBuilder;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static social.login.constant.ErrorMessage.*;
 
 public class TwitterProvider extends SocialLoginProvider {
 
@@ -51,7 +50,7 @@ public class TwitterProvider extends SocialLoginProvider {
             User twitterUser = twitter.verifyCredentials();
             return prepareUser(twitterUser);
         } catch (TwitterException e) {
-            throw new UserDetailException(ERR_GET_TWITTER_USER_DETAIL, e);
+            throw new UserDetailException(ErrorMessage.ERR_GET_TWITTER_USER_DETAIL, e);
         }
     }
 
@@ -86,9 +85,9 @@ public class TwitterProvider extends SocialLoginProvider {
 
     private void validateOauthTokenAndVerifier(SocialLoginDetail socialLoginDetail) {
         if (StringUtils.isBlank(socialLoginDetail.getOauthToken()))
-            throw new BadDataException(ERR_EMPTY_OR_NULL_OAUTH_TOKEN);
+            throw new BadDataException(ErrorMessage.ERR_EMPTY_OR_NULL_OAUTH_TOKEN);
         if (StringUtils.isBlank(socialLoginDetail.getOauthVerifier()))
-            throw new BadDataException(ERR_EMPTY_OR_NULL_OAUTH_VERIFIER);
+            throw new BadDataException(ErrorMessage.ERR_EMPTY_OR_NULL_OAUTH_VERIFIER);
     }
 
 }

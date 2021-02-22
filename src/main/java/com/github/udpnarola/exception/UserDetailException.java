@@ -1,4 +1,4 @@
-package social.login.exception;
+package com.github.udpnarola.exception;
 
 public class UserDetailException extends RuntimeException {
 

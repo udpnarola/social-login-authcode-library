@@ -1,4 +1,4 @@
-package social.login.provider;
+package com.github.udpnarola.provider;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.http.ResponseEntity;
@@ -6,14 +6,14 @@ import org.springframework.social.linkedin.api.LinkedIn;
 import org.springframework.social.linkedin.api.impl.LinkedInTemplate;
 import org.springframework.social.linkedin.connect.LinkedInConnectionFactory;
 import org.springframework.web.client.RestOperations;
-import social.login.dto.SocialLoginDetail;
-import social.login.user.SocialUser;
-import social.login.util.SocialProviderUtil;
+import com.github.udpnarola.dto.SocialLoginDetail;
+import com.github.udpnarola.user.SocialUser;
+import com.github.udpnarola.util.SocialProviderUtil;
 
 import java.util.Objects;
 
-import static social.login.constant.ErrorMessage.ERR_GET_LINKEDIN_USER_DETAIL;
-import static social.login.constant.ErrorMessage.ERR_GET_LINKEDIN_USER_EMAIL;
+import static com.github.udpnarola.constant.ErrorMessage.ERR_GET_LINKEDIN_USER_DETAIL;
+import static com.github.udpnarola.constant.ErrorMessage.ERR_GET_LINKEDIN_USER_EMAIL;
 
 public class LinkedinProvider extends SocialLoginProvider {
 

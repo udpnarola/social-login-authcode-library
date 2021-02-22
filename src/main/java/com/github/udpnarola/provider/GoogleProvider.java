@@ -1,4 +1,4 @@
-package social.login.provider;
+package com.github.udpnarola.provider;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeTokenRequest;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
@@ -6,14 +6,14 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleTokenResponse;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
-import social.login.dto.SocialLoginDetail;
-import social.login.exception.UserDetailException;
-import social.login.user.SocialUser;
-import social.login.util.SocialProviderUtil;
+import com.github.udpnarola.dto.SocialLoginDetail;
+import com.github.udpnarola.exception.UserDetailException;
+import com.github.udpnarola.user.SocialUser;
+import com.github.udpnarola.util.SocialProviderUtil;
 
 import java.io.IOException;
 
-import static social.login.constant.ErrorMessage.ERR_GET_GOOGLE_USER_DETAIL;
+import static com.github.udpnarola.constant.ErrorMessage.ERR_GET_GOOGLE_USER_DETAIL;
 
 public class GoogleProvider extends SocialLoginProvider {
 

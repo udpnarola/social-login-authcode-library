@@ -1,12 +1,12 @@
-package social.login.provider;
+package com.github.udpnarola.provider;
 
+import com.github.udpnarola.dto.SocialLoginDetail;
+import com.github.udpnarola.user.SocialUser;
+import com.github.udpnarola.util.SocialProviderUtil;
 import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.api.User;
 import org.springframework.social.facebook.api.impl.FacebookTemplate;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
-import social.login.dto.SocialLoginDetail;
-import social.login.user.SocialUser;
-import social.login.util.SocialProviderUtil;
 
 import java.util.Map;
 
