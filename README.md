@@ -62,7 +62,7 @@ socialProvider = new TwitterProvider(twitterClientId, twitterClientSecret);
 socialUser = socialProvider.getUser(new SocialLoginDetail(oauthToken, oauthVerifier));
 ```
 
-And we are done, that's all we have to do **:)**
+And we are done, that's all we have to do :blush:
 
 ### License 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/udpnarola/social-login-authcode-library/blob/master/LICENSE) 
