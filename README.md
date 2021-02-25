@@ -14,7 +14,7 @@ please let us know here, [Request New Feature](https://github.com/udpnarola/soci
 
 ### The library is available on Maven Central
 You can easily use this library in your project because we 
-have deployed it on **Maven Central**, try now [Get Library from Maven Central](https://mvnrepository.com/artifact/com.github.udpnarola/social-login-authcode-library/1.0.0).
+have deployed it on **Maven Central**, try now [Get Library from Maven Central](https://mvnrepository.com/artifact/com.github.udpnarola/social-login-authcode-library/1.1.0).
 
 ### How to Use this Library
 As this a **hybrid auth-code grant type library**, so here you 
@@ -65,6 +65,6 @@ socialUser = socialProvider.getUser(new SocialLoginDetail(oauthToken, oauthVerif
 And we are done, that's all we have to do **:)**
 
 ### License 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/udpnarola/social-login-authcode-library/blob/master/LICENSE) 
 
 **The MIT License**
