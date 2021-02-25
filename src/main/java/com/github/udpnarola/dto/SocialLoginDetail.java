@@ -1,15 +1,25 @@
 package com.github.udpnarola.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class SocialLoginDetail {
 
     private String authCode;
     private String oauthToken;
     private String oauthVerifier;
+
+    public SocialLoginDetail() {
+    }
+
+    public SocialLoginDetail(String authCode) {
+        this.authCode = authCode;
+    }
+
+    public SocialLoginDetail(String oauthToken, String oauthVerifier) {
+        this.oauthToken = oauthToken;
+        this.oauthVerifier = oauthVerifier;
+    }
 }
